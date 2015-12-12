@@ -114,8 +114,23 @@
                             </div>
                         </div>
                     </li>
+                    @if(isset(Auth::user()->email))
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-5">
+                                <span class="glyphicon glyphicon-option-horizontal"></span> {{Auth::user()->name}}<span class="caret"></span>
+                            </a>
+                            <div id="dropdown-5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="/logout" target="_self"><p>Log out</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        @else
+                        <li><a href="/admin-login"><span class="glyphicon glyphicon-log-in"></span> Admin Sign in</a></li>
 
-                    <li><a href="/signin"><span class="glyphicon glyphicon-log-in"></span> Admin Sign in</a></li>
+                    @endif
 
                 </ul>
             </div><!-- /.navbar-collapse -->

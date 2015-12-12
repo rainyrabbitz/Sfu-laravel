@@ -26,6 +26,18 @@ Route::get('/', function(){
     return view('home.homepage');
 });
 
+
+Route::get('admin-register', 'reg\RegistrationController@register');
+Route::post('reg', 'reg\RegistrationController@postRegister');
+Route::get('admin-login', 'login\LoginController@login');
+Route::post('/login', 'login\LoginController@postLogin');
+Route::get('/logout', 'login\LoginController@logout');
+
+Route::controllers([
+    'password' => 'Auth\PasswordController',
+]);
+
+
 Route::get('/hierarchy', 'ChartController@index');
 
 Route::get('/member', 'MemberController@index');
@@ -39,6 +51,9 @@ Route::get('/announces/show/{year}', 'AnnounceController@getAnnounceByYear');
 Route::get('/progress/add', 'ProgressController@create');
 
 
+//plans
+Route::get('/plans/add', 'PlanController@create');
+Route::post('/plans', 'PlanController@store');
 
 //responsibility
 Route::get('/responsibility/add', 'ResponsibilityController@create');
@@ -66,13 +81,17 @@ Route::get('/meetingReport', 'MeetingreportController@index');
 Route::get('/result', 'ResultController@index');
 
 Route::get('/pa', 'PaController@index');
-Route::get('/performances/add', 'PaController@create');
+Route::get('/performances/add', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
 Route::post('/performances', 'PaController@store');
 
 
 Route::get('/track_pa', 'TrackController@index');
 
 Route::get('/csr_activity', 'CsrController@index');
+
+Route::get('/track-performance/add', 'TrackController@create');
+
+Route::post('/track-performance/add', 'TrackController@store');
 
 Route::get('/manageRisk', 'ManageriskController@index');
 
@@ -89,10 +108,7 @@ Route::get('/product', 'ProductController@index');
 
 //Admin
 
-Route::get('/signin', 'SigninController@index');
+Route::get('/admin/management', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
 
 
 Route::get('/sidebar', 'SidebarController@index');
-
-
-Route::get('/admin/management', 'AdminManageController@index');

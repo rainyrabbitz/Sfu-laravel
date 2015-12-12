@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\TrackPerformanceAgreement;
+use App\Model\Plan;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
-
-class TrackController extends Controller
+class PlanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +20,7 @@ class TrackController extends Controller
      */
     public function index()
     {
-        return view('pa.track_pa');
+        //
     }
 
     /**
@@ -31,7 +30,7 @@ class TrackController extends Controller
      */
     public function create()
     {
-        return view('pa.addTrackPerformance');
+        return view('plan.addPlan');
     }
 
     /**
@@ -51,31 +50,31 @@ class TrackController extends Controller
             return redirect()->back()->withErrors(['file' => 'ไฟล์จะต้องเป็น .pdf เท่านั้น'])->withInput();
         }
 
-        $trackPerformances = TrackPerformanceAgreement::where('year', '=', $request->get('year'))->where('period', '=', $request->get('period'))->get();
-        if(sizeof($trackPerformances) > 0) {
-            foreach ($trackPerformances as $performance) {
-                $filename = base_path() . '/public/uploads/TrackPerformances-' . $request->get('year') . '/'.$request->get('period'). '/' . $performance->file_path;
-                if (File::exists($filename)) {
-                    File::delete($filename);
-                }
-                TrackPerformanceAgreement::destroy($performance->id);
-            }
-        }
-
-
         if(Input::file('file')->isValid()){
 
             $filePath = date('Ymd_His').'.pdf';
-            if (Input::file('file')->move(base_path() . '/public/uploads/TrackPerformances-' . $request->get('year').'/'.$request->get('period'), $filePath)) {
-                //example of delete exist file
+            if (Input::file('file')->move(base_path() . '/public/uploads/Plans-' . $request->get('year'), $filePath)) {
 
-                $performance = new TrackPerformanceAgreement();
-                $performance->file_path = $filePath;
-                $performance->file_name = $request->get('name');
-                $performance->year = $request->get('year');
-                $performance->period = $request->get('period');
-                $performance->save();
-                return redirect()->back();
+                //example of delete exist file
+                //get all file to delete
+                $planList = Plan::all();
+                if(sizeof($planList)!=0){
+                    foreach($planList as $plan) {
+                        $filename = base_path() . '/public/uploads/Plans-' . $request->get('year') . '/' . $plan->file_path;
+                        //delete upload file
+                        if (File::exists($filename)) {
+                            File::delete($filename);
+                        }
+                        Plan::destroy($plan->id);
+                    }
+                }
+                //add new file path in to databnase
+                $plan = new Plan();
+                $plan->year = $request->get('year');
+                $plan->file_path = $filePath;
+                $plan->save();
+
+                return redirect('/admin/management');
             } else {
                 return redirect()->back()->withErrors(['error_message' => 'ไฟล์อัพโหลดมีปัญหากรุณาลองใหม่อีกครั้ง']);
             }
@@ -85,17 +84,12 @@ class TrackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $period (period time)
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($period, $year)
+    public function show($id)
     {
-        $period = TrackPerformanceAgreement::where('year', '=', $year, 'AND', 'period', '=',$period )->orderBy('created_at', 'desc')->first();
-        if($period == null) {
-
-        } else {
-            return view('', ['period' => $period]);
-        }
+        //
     }
 
     /**
@@ -130,5 +124,13 @@ class TrackController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getPlanByYear($year){
+        $plan = Plan::where('year', '=', $year)->orderBy('created_at', 'desc')->first();
+        if($plan == null) {
+
+        } else {
+            return view('', ['plan' => $plan]);
+        }
     }
 }

@@ -1,6 +1,6 @@
 @extends('master_admin')
 
-@section('title', 'เพิ่มไฟล์')
+@section('title', 'อัพเดทไฟล์')
 
 @section('content')
 
@@ -40,25 +40,73 @@
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA)</a>
+                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA) รูปเล่ม</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.</a>
+                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม. (PA)</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">แผนปฏิบัติการ อผม.</a>
+                <a href="/plans/add" class="btn btn-primary btn-lg btn-block">แผนปฏิบัติการ อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">คำสั่งคณะกรรมการ</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานความก้าวหน้าแผนบริหารความเสี่ยง อผม. ประจำเดือน</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">รายงานการบริหารความเสี่ยง อผม.</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานการควบคุมภายใน อผม.</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุมคณะกรรมการ</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานผลการดำเนินงาน อผม. (OPR)</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุม ควฝผ-อผม.</a>
+            </div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 30px">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">กองจิตอาสา</a>
             </div>
         </div>
     </div>
