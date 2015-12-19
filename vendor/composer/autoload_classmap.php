@@ -9,6 +9,8 @@ return array(
     'CreateAnnouncesTable' => $baseDir . '/database/migrations/2015_11_22_132246_create_announces_table.php',
     'CreateBoardCommandsTable' => $baseDir . '/database/migrations/2015_12_19_211737_create_board_commands_table.php',
     'CreateCommmandOrderTable' => $baseDir . '/database/migrations/2015_11_28_220849_create_commmand_order_table.php',
+    'CreateControlsTable' => $baseDir . '/database/migrations/2015_12_20_000951_create_controls_table.php',
+    'CreateMeetingReportsTable' => $baseDir . '/database/migrations/2015_12_20_002551_create_meeting_reports_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePerformanceTable' => $baseDir . '/database/migrations/2015_11_29_191815_create_performance_table.php',
     'CreatePlanTable' => $baseDir . '/database/migrations/2015_12_12_114132_create_plan_table.php',

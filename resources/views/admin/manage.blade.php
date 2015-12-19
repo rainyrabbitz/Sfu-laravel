@@ -88,7 +88,7 @@
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุมคณะกรรมการ</a>
+                <a href="/meetingReport/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุมคณะกรรมการ</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">

@@ -13,22 +13,21 @@
         <div class="col-md-12" style="height: 2px; background-color: #9479bd; margin-bottom: 50px"></div>
 
         <div class="col-lg-12 text-center" style="margin-bottom: 30%">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#">ประจำปี 2558</a>
-                        </h4>
+            <div class="col-md-offset-3 col-md-6 panel-group" id="accordion">
+                @foreach($years as $year)
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                @foreach($controls as $control)
+                                    @if($control->year == $year)
+                                        <a href="/uploads/Control-reports/{{$control->file_path}}" target="_blank">ปี {{$year}}</a>
+                                    @endif
+                                @endforeach
+
+                            </h4>
+                        </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#">ประจำปี 2559</a>
-                        </h4>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

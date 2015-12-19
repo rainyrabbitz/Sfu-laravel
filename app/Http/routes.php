@@ -96,9 +96,9 @@ Route::get('/control-report', 'ControlController@index');
 Route::get('/control-report/add', 'ControlController@create');
 Route::post('/control-report', 'ControlController@store');
 
-
-
 Route::get('/meetingReport', 'MeetingreportController@index');
+Route::get('/meetingReport/add', 'MeetingreportController@create');
+Route::post('/meetingReport', 'MeetingreportController@store');
 
 Route::get('/result', 'ProgressController@index');
 
