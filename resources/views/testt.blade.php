@@ -1,12 +1,7 @@
-@extends('master')
-
-@section('title', 'คณะทำงานวิชาการและวางแผนประจำฝ่ายผลิตเหมืองแม่เมาะ')
-
-@section('content')
-
-<div class="row" style="margin-bottom: 30%">
+<div class="side-body">
     <div class="container-fluid">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="row">
+            <div id="carousel-example-generic" class="col-md-8 carousel slide" data-ride="carousel" style="margin-top: -21px">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -46,10 +41,5 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
     </div>
-</div>
-
-
-    @include('footer')
-
-    @endsection

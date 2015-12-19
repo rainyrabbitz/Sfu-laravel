@@ -122,6 +122,7 @@
                             <div id="dropdown-5" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul class="nav navbar-nav">
+                                        <li><a href="/admin/management" target="_self"><p>Management</p></a> </li>
                                         <li><a href="/logout" target="_self"><p>Log out</p></a></li>
                                     </ul>
                                 </div>

@@ -9,34 +9,90 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php" style="font-size: 20px">EGAT SFU</a>
+            <a class="navbar-brand" href="index.php" style="font-size: 20px"><strong>ควฝผ-อผม.</strong></a>
         </div>
+
+
+
+        <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>เมนูหลัก </strong><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/uploads/Command/command.pdf" target="_blank"><span class="glyphicon glyphicon-align-justify"></span> คำสั่งแต่งตั้งคณะทำงานและวางแผน</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/hierarchy"><span class="glyphicon glyphicon-user"></span> โครงสายบังคับบัญชา</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/uploads/Responsibility/responsibility.pdf" target="_blank"><span class="glyphicon glyphicon-tasks"></span> ภารกิจหน้าที่</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><span class="glyphicon glyphicon-bookmark"></span> ภารกิจหลักและเป้าหมายการดำเนินงาน</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/announces"><p>ประกาศนโยบายและแผนการดำเนินงาน</p><p>ของอผม.</p></a></li>
+                            <li><a href="/result"><p>ผลความก้าวหน้าของนโยบายและแผน</p><p>การดำเนินงานของ อผม. (ประจำเดือน)</p></a></li>
+                        </ul>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>  ข้อปฏิบัติการประเมินผลการดำเนินงาน</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pa"><p>ข้อปฏิบัติการประเมินผลการดำเนินงาน</p><p>ของอผม. (PA อผม.)</p></a></li>
+                            <li><a href="/track_pa"><p>ติดตามความก้าวหน้าการประเมินผลการ</p><p>ดำเนินงานของ อผม. เทียบกับเกณฑ์</p></a></li>
+                        </ul>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><span class="glyphicon glyphicon-calendar"></span> แผนปฏิบัติการ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdf/6_1.pdf" target="_blank"><p>แผนปฏิบัติการอผม. (รูปเล่ม)</p></a></li>
+                            <li><a href="http://it-fuel.egat.co.th/fuelplan/"><p>รายงานความก้าวหน้าและประเมินผล แผน</p><p>ปฏิบัติการ อผม. (ประจำเดือน)</p></a></li>
+                        </ul>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><span class="glyphicon glyphicon-stats"></span> การบริหารความเสี่ยงและการควบคุมภายใน</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdf/command.pdf" target="_blank"><p>คำสั่งคณะกรรมการ</p></a></li>
+                            <li><a href="/riskreport/authorize"><p>เอกสารรายงาน</p></a></li>
+                            <li><a href="http://intranet.egat.co.th/Risk2548R1/RiskWebPage/RiskWebPageIndex.htm">การบริหารความเสี่ยงและการควบคุมภายในของ
+                                    กฟผ.</a></li>
+                            <li><a href="http://it-fuel.egat.co.th/index.php/risk-ctrl">การบริหารความเสี่ยงและการควบคุมภายในของ
+                                    รวช.</a></li>
+                            <li><a href="http://iaudit.egat.co.th/"><p>การบริหารความเสี่ยงและการควบคุมภายในของ</p><p>
+                                        สำนักงานตรวจสอบภายใน</p></a></li>
+                        </ul>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/oprReport"><span class="glyphicon glyphicon-send"></span> รายงานผลการดำเนินงาน อผม. (OPR)</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/sfuReport"><span class="glyphicon glyphicon-cloud"></span> รายงานการประชุม ควฝผ - อผม.</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><span class="glyphicon glyphicon-calendar"></span> งานอื่นๆที่ได้รับมอบหมาย</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdf/command.pdf" target="_blank"><p>กองจิตอาสา</p></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
 
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 14px">Admin Login<span class="caret"></span></a>
-                <ul id="login-dp" class="dropdown-menu">
-                    <li>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-12 text-center" style="color: #737373"><h4>เข้าสู่ระบบแอดมิน</h4></div>
-                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </li>
+                @if(isset(Auth::user()->email))
+                <li> <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <i class="icon-user"></i> {{Auth::user()->name}}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/admin/management" target="_self"><p>Management</p></a> </li>
+                    <li><a href="/logout" target="_self"><p>Log out</p></a></li>
                 </ul>
+                </li>
+                @else
+                <li><a href="/admin-login"></span> Admin Sign in</a></li>
+                @endif
             </li>
         </ul>
         </li>
@@ -44,3 +100,5 @@
     <!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+

@@ -13,6 +13,7 @@ return array(
     'CreatePlanTable' => $baseDir . '/database/migrations/2015_12_12_114132_create_plan_table.php',
     'CreateProgressTable' => $baseDir . '/database/migrations/2015_11_29_212855_create_progress_table.php',
     'CreateResponsibilityTable' => $baseDir . '/database/migrations/2015_11_29_132914_create_responsibility_table.php',
+    'CreateSfuReportTable' => $baseDir . '/database/migrations/2015_12_12_134444_create_sfu_report_table.php',
     'CreateTrackPaTable' => $baseDir . '/database/migrations/2015_12_07_142153_create_track_pa_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

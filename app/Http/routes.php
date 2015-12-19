@@ -78,7 +78,7 @@ Route::get('/control', 'ControlController@index');
 
 Route::get('/meetingReport', 'MeetingreportController@index');
 
-Route::get('/result', 'ResultController@index');
+Route::get('/result', 'ProgressController@index');
 
 Route::get('/pa', 'PaController@index');
 Route::get('/performances/add', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
@@ -97,8 +97,11 @@ Route::get('/manageRisk', 'ManageriskController@index');
 
 Route::get('/oprReport', 'OprController@index');
 
-Route::get('/sfuReport', 'SfuController@index');
 
+//sfu report
+Route::get('/sfuReport', 'SfuController@index');
+Route::get('/sfu/meeting-report/add', 'SfuController@create');
+Route::post('/sfu/meeting-report', 'SfuController@store');
 //Route::get('/progressreport', 'ProgressController@index');
 
 Route::get('/member/add', 'MemberController@create');
@@ -111,4 +114,5 @@ Route::get('/product', 'ProductController@index');
 Route::get('/admin/management', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
 
 
+Route::get('/sidebar', 'SidebarController@index');
 Route::get('/sidebar', 'SidebarController@index');

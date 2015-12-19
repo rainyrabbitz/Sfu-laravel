@@ -16,7 +16,8 @@ class SidebarController extends Controller
      */
     public function index()
     {
-        return view('sidebar_menu');
+//        return view('sidebar_menu');
+        return view('test');
     }
 
     /**

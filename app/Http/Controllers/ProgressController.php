@@ -19,7 +19,7 @@ class ProgressController extends Controller
      */
     public function index()
     {
-        //
+        return view('announce.result');
     }
 
     /**
