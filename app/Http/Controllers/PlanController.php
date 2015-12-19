@@ -20,7 +20,8 @@ class PlanController extends Controller
      */
     public function index()
     {
-        //
+        $plan = Plan::orderBy('year', 'asc')->get();
+        return view('plan.plan', ['plans' => $plan]);
     }
 
     /**
@@ -50,24 +51,22 @@ class PlanController extends Controller
             return redirect()->back()->withErrors(['file' => 'ไฟล์จะต้องเป็น .pdf เท่านั้น'])->withInput();
         }
 
+        //example of delete exist file
+        $existPlan = Plan::where('year','=',$request->get('year'))->first();
+        if($existPlan != null){
+            $filename = base_path() . '/public/uploads/Plans/Plan-' . $request->get('year') . '/' . $existPlan->file_path;
+            //delete upload file
+            if (File::exists($filename)) {
+                File::delete($filename);
+            }
+            Plan::destroy($existPlan->id);
+        }
+
         if(Input::file('file')->isValid()){
 
             $filePath = date('Ymd_His').'.pdf';
-            if (Input::file('file')->move(base_path() . '/public/uploads/Plans-' . $request->get('year'), $filePath)) {
+            if (Input::file('file')->move(base_path() . '/public/uploads/Plans/Plan-' . $request->get('year'), $filePath)) {
 
-                //example of delete exist file
-                //get all file to delete
-                $planList = Plan::all();
-                if(sizeof($planList)!=0){
-                    foreach($planList as $plan) {
-                        $filename = base_path() . '/public/uploads/Plans-' . $request->get('year') . '/' . $plan->file_path;
-                        //delete upload file
-                        if (File::exists($filename)) {
-                            File::delete($filename);
-                        }
-                        Plan::destroy($plan->id);
-                    }
-                }
                 //add new file path in to databnase
                 $plan = new Plan();
                 $plan->year = $request->get('year');

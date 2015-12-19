@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Performance;
 use App\Model\TrackPerformanceAgreement;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,14 @@ class TrackController extends Controller
      */
     public function index()
     {
-        return view('pa.track_pa');
+        $years = TrackPerformanceAgreement::orderBy('year', 'asc')->lists('year');
+        $results = array();
+        foreach($years as $year){
+            $results[] = $year;
+        }
+        $data = array_unique($results);
+        $tracks = TrackPerformanceAgreement::all();
+        return view('pa.track_pa', ['years' => $data], ['tracks' => $tracks]);
     }
 
     /**
@@ -71,11 +79,10 @@ class TrackController extends Controller
 
                 $performance = new TrackPerformanceAgreement();
                 $performance->file_path = $filePath;
-                $performance->file_name = $request->get('name');
                 $performance->year = $request->get('year');
                 $performance->period = $request->get('period');
                 $performance->save();
-                return redirect()->back();
+                return redirect('/admin/management');
             } else {
                 return redirect()->back()->withErrors(['error_message' => 'ไฟล์อัพโหลดมีปัญหากรุณาลองใหม่อีกครั้ง']);
             }

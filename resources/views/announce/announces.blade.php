@@ -20,7 +20,7 @@
             <div class="col-md-5">
                 <ul>
                     @foreach($announces as $announce)
-                        <li><a href="uploads/Announces-{{$announce->year}}/{{$announce->file_path}}"><h3>
+                        <li><a href="uploads/Announces/Announce-{{$announce->year}}/{{$announce->file_path}}"><h3>
                                     ปี {{$announce->year}} {{$announce->file_name}}</h3></a></li>
                     @endforeach
                 </ul>

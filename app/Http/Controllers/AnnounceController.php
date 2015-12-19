@@ -55,12 +55,12 @@ class AnnounceController extends Controller
         if(Input::file('file')->isValid()){
 
             $filePath = date('Ymd_His').'.pdf';
-            if (Input::file('file')->move(base_path() . '/public/uploads/Announces-' . $request->get('year'), $filePath)) {
+            if (Input::file('file')->move(base_path() . '/public/uploads/Announces/Announce-' . $request->get('year'), $filePath)) {
                 //example of delete exist file
                 $announceList = Announce::all();
                 if(sizeof($announceList)!=0){
                     $lastAnnounce = $announceList[sizeof($announceList)-1];
-                    $filename = base_path() . '/public/uploads/Announces-2015/'.$lastAnnounce->file_path;
+                    $filename = base_path() . '/public/uploads/Announces/Announce-/'.$request->get('year').'/'.$lastAnnounce->file_path;
                     if (File::exists($filename)) {
                         File::delete($filename);
                     }
@@ -73,7 +73,6 @@ class AnnounceController extends Controller
                 }
 
                 $announce = new Announce();
-                $announce->file_name = $request->get('name');
                 $announce->file_path = $filePath;
                 $announce->year = $request->get('year');
                 $announce->save();

@@ -3,10 +3,9 @@
 @section('title', 'รายงานการประชุม ควฝผ-อผม.')
 
 
+@section('content')
 
     <div class="container-fluid" style="margin-bottom: 30%">
-        <div class="col-md-10 text-center">
-            @section('content')
                 <div class="col-md-12">
                     <h2>
                         <p class="header">รายงาน<span class="header2">การประชุม ควฝผ-อผม.</span></p>

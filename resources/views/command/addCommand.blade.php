@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <div class="container-fluid side-body">
+    <div class="container-fluid">
 
         <div class="col-md-12 text-center">
             <h2>เพิ่มไฟล์ของ คำสั่งแต่งตั้ง</h2>

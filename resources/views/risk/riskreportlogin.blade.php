@@ -1,4 +1,4 @@
-@extends('master_old')
+@extends('master')
 
 @section('title', 'เอกสารรายงาน')
 

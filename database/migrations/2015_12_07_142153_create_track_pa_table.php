@@ -14,7 +14,6 @@ class CreateTrackPaTable extends Migration
     {
         Schema::create('track_performance_agreements', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('file_name');
             $table->string('file_path');
             $table->integer('year');
             $table->integer('period');

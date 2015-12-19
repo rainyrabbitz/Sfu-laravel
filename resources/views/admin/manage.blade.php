@@ -1,4 +1,4 @@
-@extends('master_admin')
+@extends('master')
 
 @section('title', 'อัพเดทไฟล์')
 
@@ -28,25 +28,25 @@
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">ประกาศนโยบายและแผนการดำเนินงานของ อผม.</a>
+                <a href="/announces/add" class="btn btn-primary btn-lg btn-block">ประกาศนโยบายและแผนการดำเนินงานของ อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ผลความก้าวหน้าของนโยบายและแผนการดำเนินงานของ อผม.</a>
+                <a href="/progress/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ผลความก้าวหน้าของนโยบายและแผนการดำเนินงานของ อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA) รูปเล่ม</a>
+                <a href="/performances/add" class="btn btn-primary btn-lg btn-block">ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA) รูปเล่ม</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม. (PA)</a>
+                <a href="/track-performance/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม. (PA)</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
@@ -58,31 +58,31 @@
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">คำสั่งคณะกรรมการ</a>
+                <a href="/board-command/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">คำสั่งคณะกรรมการ</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.</a>
+                <a href="/risk-plan/add" class="btn btn-primary btn-lg btn-block">แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานความก้าวหน้าแผนบริหารความเสี่ยง อผม. ประจำเดือน</a>
+                <a href="/risk-progress/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานความก้าวหน้าแผนบริหารความเสี่ยง อผม. ประจำเดือน</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/commands/add" class="btn btn-primary btn-lg btn-block">รายงานการบริหารความเสี่ยง อผม.</a>
+                <a href="/risk-management/add" class="btn btn-primary btn-lg btn-block">รายงานการบริหารความเสี่ยง อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานการควบคุมภายใน อผม.</a>
+                <a href="/control-report/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานการควบคุมภายใน อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">

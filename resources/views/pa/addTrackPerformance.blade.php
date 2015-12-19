@@ -1,4 +1,4 @@
-@extends('master_admin')
+@extends('master')
 
 @section('title', 'ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.')
 
@@ -26,9 +26,6 @@
             {{--always required csrf_token--}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-            <div class="form-group">
-                <input type="text" name="name" class="form-control input-lg" placeholder="ชื่อประกาศ">
-            </div>
             <div class="form-group">
                 <input type="file" name="file" class="form-control input-lg">
             </div>

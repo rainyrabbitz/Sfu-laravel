@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php" style="font-size: 20px"><strong>ควฝผ-อผม.</strong></a>
+            <a class="navbar-brand" href="/" style="font-size: 20px"><strong>ควฝผ-อผม.</strong></a>
         </div>
 
 
@@ -18,7 +18,7 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>เมนูหลัก </strong><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="/uploads/Command/command.pdf" target="_blank"><span class="glyphicon glyphicon-align-justify"></span> คำสั่งแต่งตั้งคณะทำงานและวางแผน</a></li>
+                    <li><a href="/uploads/Commands/command.pdf" target="_blank"><span class="glyphicon glyphicon-align-justify"></span> คำสั่งแต่งตั้งคณะทำงานและวางแผน</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="/hierarchy"><span class="glyphicon glyphicon-user"></span> โครงสายบังคับบัญชา</a></li>
                     <li role="separator" class="divider"></li>
@@ -35,7 +35,7 @@
                     <li class="dropdown-submenu">
                         <a tabindex="-1" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>  ข้อปฏิบัติการประเมินผลการดำเนินงาน</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/pa"><p>ข้อปฏิบัติการประเมินผลการดำเนินงาน</p><p>ของอผม. (PA อผม.)</p></a></li>
+                            <li><a href="/performance-agreement"><p>ข้อปฏิบัติการประเมินผลการดำเนินงาน</p><p>ของอผม. (PA อผม.)</p></a></li>
                             <li><a href="/track_pa"><p>ติดตามความก้าวหน้าการประเมินผลการ</p><p>ดำเนินงานของ อผม. เทียบกับเกณฑ์</p></a></li>
                         </ul>
                     </li>
@@ -43,7 +43,7 @@
                     <li class="dropdown-submenu">
                         <a tabindex="-1" href="#"><span class="glyphicon glyphicon-calendar"></span> แผนปฏิบัติการ</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdf/6_1.pdf" target="_blank"><p>แผนปฏิบัติการอผม. (รูปเล่ม)</p></a></li>
+                            <li><a href="/plan" target="_blank"><p>แผนปฏิบัติการอผม. (รูปเล่ม)</p></a></li>
                             <li><a href="http://it-fuel.egat.co.th/fuelplan/"><p>รายงานความก้าวหน้าและประเมินผล แผน</p><p>ปฏิบัติการ อผม. (ประจำเดือน)</p></a></li>
                         </ul>
                     </li>
@@ -51,7 +51,7 @@
                     <li class="dropdown-submenu">
                         <a tabindex="-1" href="#"><span class="glyphicon glyphicon-stats"></span> การบริหารความเสี่ยงและการควบคุมภายใน</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdf/command.pdf" target="_blank"><p>คำสั่งคณะกรรมการ</p></a></li>
+                            <li><a href="/uploads/Commands/board-command.pdf" target="_blank"><p>คำสั่งคณะกรรมการ</p></a></li>
                             <li><a href="/riskreport/authorize"><p>เอกสารรายงาน</p></a></li>
                             <li><a href="http://intranet.egat.co.th/Risk2548R1/RiskWebPage/RiskWebPageIndex.htm">การบริหารความเสี่ยงและการควบคุมภายในของ
                                     กฟผ.</a></li>

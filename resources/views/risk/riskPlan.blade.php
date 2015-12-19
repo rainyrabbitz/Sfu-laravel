@@ -1,4 +1,4 @@
-@extends('master_old')
+@extends('master')
 
 @section('title', 'แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.')
 
@@ -23,8 +23,11 @@
                             </h2>
                         </div>
                         <div id="collapse1" class="panel-collapse collapse">
-                            <div class="panel-body">ประจำปี 2558</div>
-                            <div class="panel-footer">ประจำปี 2558</div>
+                            @foreach($riskPlans as $riskPlan)
+                                <div class="panel-body">
+                                    <a href="/uploads/Risk-plan/{{$riskPlan->file_path}}" target="_blank">ประจำปี {{$riskPlan->year}}</a>
+                                </div>
+                                @endforeach
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,6 @@ class CreatePerformanceTable extends Migration
     {
         Schema::create('performances', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('file_name');
             $table->string('file_path');
             $table->integer('year');
             $table->timestamps();

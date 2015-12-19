@@ -7,12 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CreateAnnouncesTable' => $baseDir . '/database/migrations/2015_11_22_132246_create_announces_table.php',
+    'CreateBoardCommandsTable' => $baseDir . '/database/migrations/2015_12_19_211737_create_board_commands_table.php',
     'CreateCommmandOrderTable' => $baseDir . '/database/migrations/2015_11_28_220849_create_commmand_order_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePerformanceTable' => $baseDir . '/database/migrations/2015_11_29_191815_create_performance_table.php',
     'CreatePlanTable' => $baseDir . '/database/migrations/2015_12_12_114132_create_plan_table.php',
     'CreateProgressTable' => $baseDir . '/database/migrations/2015_11_29_212855_create_progress_table.php',
     'CreateResponsibilityTable' => $baseDir . '/database/migrations/2015_11_29_132914_create_responsibility_table.php',
+    'CreateRiskManagementsTable' => $baseDir . '/database/migrations/2015_12_19_234738_create_risk_managements_table.php',
+    'CreateRiskPlansTable' => $baseDir . '/database/migrations/2015_12_19_214846_create_risk_plans_table.php',
+    'CreateRiskProgressesTable' => $baseDir . '/database/migrations/2015_12_19_215120_create_risk_progresses_table.php',
     'CreateSfuReportTable' => $baseDir . '/database/migrations/2015_12_12_134444_create_sfu_report_table.php',
     'CreateTrackPaTable' => $baseDir . '/database/migrations/2015_12_07_142153_create_track_pa_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',

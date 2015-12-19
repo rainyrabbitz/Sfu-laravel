@@ -59,7 +59,7 @@ class CommandController extends Controller
             if(sizeof($commandList)!=0){
                 $lastCommand = $commandList[sizeof($commandList)-1];
                 //get file path from database(the last one from database but actually in database always has only one command)
-                $filename = base_path() . '/public/uploads/Command/'.$lastCommand->file_path;
+                $filename = base_path() . '/public/uploads/Commands/'.$lastCommand->file_path;
                 //check has file or not is has then delete file in uploads/Command folder
                 if (File::exists($filename)) {
                     File::delete($filename);
@@ -71,7 +71,7 @@ class CommandController extends Controller
             }
 
             //move file to destination and set file name
-            if (Input::file('file')->move(base_path() . '/public/uploads/Command', $filePath)) {
+            if (Input::file('file')->move(base_path() . '/public/uploads/Commands', $filePath)) {
                 //example of delete exist file
 
 

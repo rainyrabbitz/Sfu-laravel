@@ -26,7 +26,7 @@ class ControlController extends Controller
      */
     public function create()
     {
-        //
+        return view('risk.addControl');
     }
 
     /**

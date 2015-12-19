@@ -17,18 +17,14 @@
     @endif
 
     <div class="container">
-        <div class="side-body">
             <div class="col-md-12 text-center">
                 <h2>เพิ่มไฟล์ของ ผลความก้าวหน้าของนโยบาย</h2>
             </div>
 
-            <form class="col-md-offset-3 col-md-6 text-center" action="/announces" method="post" enctype="multipart/form-data">
+            <form class="col-md-offset-3 col-md-6 text-center" action="/risk-progress" method="post" enctype="multipart/form-data">
                 {{--always required csrf_token--}}
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control input-lg" placeholder="ชื่อประกาศ">
-                </div>
                 <div class="form-group">
                     <input type="file" name="file" class="form-control input-lg">
                 </div>
@@ -48,7 +44,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <select class="form-control input-lg" name="year">
+                    <select class="form-control input-lg" name="month">
                         <option value="01">มกราคม</option>
                         <option value="02">กุมภาพันธ์</option>
                         <option value="03">มีนาคม</option>
@@ -67,7 +63,6 @@
                     <input type="submit" value="เพิ่มประกาศ" class="btn btn-default">
                 </div>
             </form>
-        </div>
     </div>
 
 

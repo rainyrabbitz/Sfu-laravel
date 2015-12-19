@@ -47,11 +47,15 @@ Route::get('/announces/add', 'AnnounceController@create');
 Route::post('/announces', 'AnnounceController@store');
 Route::get('/announces/show/{year}', 'AnnounceController@getAnnounceByYear');
 
+
 //progress
-Route::get('/progress/add', 'ProgressController@create');
+Route::post('/progress', 'ProgressController@store');
+Route::get('/progress/add', ['uses' => 'ProgressController@create', 'middleware' => 'auth']);
+
 
 
 //plans
+Route::get('/plan', 'PlanController@index');
 Route::get('/plans/add', 'PlanController@create');
 Route::post('/plans', 'PlanController@store');
 
@@ -63,6 +67,11 @@ Route::get('/commands/add', 'CommandController@create');
 Route::post('/commands', 'CommandController@store');
 
 
+//board command
+Route::get('/board-command/add', 'BoardCommandController@create');
+Route::post('/board-command', 'BoardCommandController@store');
+
+
 //Risk Report Controller
 Route::get('/riskreport/authorize', 'RiskReportController@authorizeUser');
 Route::post('/riskreport/checkpassword', 'RiskReportController@checkAuthorizeUser');
@@ -70,18 +79,33 @@ Route::post('/riskreport/checkpassword', 'RiskReportController@checkAuthorizeUse
 
 Route::get('/riskreports', 'RiskReportController@index');
 
-Route::get('/riskPlan', 'RiskplanController@index');
+Route::get('/risk-plan', 'RiskplanController@index');
+Route::get('/risk-plan/add', 'RiskplanController@create');
+Route::post('/risk-plan', 'RiskplanController@store');
 
-Route::get('/riskProgress', 'RiskprogressController@index');
+Route::get('/risk-progress', 'RiskprogressController@index');
+Route::get('/risk-progress/add', 'RiskprogressController@create');
+Route::post('/risk-progress', 'RiskprogressController@store');
 
-Route::get('/control', 'ControlController@index');
+Route::get('/risk-management', 'ManageriskController@index');
+Route::get('/risk-management/add', 'ManageriskController@create');
+Route::post('/risk-management', 'ManageriskController@store');
+
+
+Route::get('/control-report', 'ControlController@index');
+Route::get('/control-report/add', 'ControlController@create');
+Route::post('/control-report', 'ControlController@store');
+
+
 
 Route::get('/meetingReport', 'MeetingreportController@index');
 
 Route::get('/result', 'ProgressController@index');
 
-Route::get('/pa', 'PaController@index');
-Route::get('/performances/add', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
+
+//Performance Agreement
+Route::get('/performance-agreement', 'PaController@index');
+Route::get('/performances/add', ['uses' => 'PaController@create', 'middleware' => 'auth']);
 Route::post('/performances', 'PaController@store');
 
 
@@ -92,8 +116,6 @@ Route::get('/csr_activity', 'CsrController@index');
 Route::get('/track-performance/add', 'TrackController@create');
 
 Route::post('/track-performance/add', 'TrackController@store');
-
-Route::get('/manageRisk', 'ManageriskController@index');
 
 Route::get('/oprReport', 'OprController@index');
 
@@ -110,7 +132,6 @@ Route::get('/product', 'ProductController@index');
 
 
 //Admin
-
 Route::get('/admin/management', ['uses' => 'AdminManageController@index', 'middleware' => 'auth']);
 
 

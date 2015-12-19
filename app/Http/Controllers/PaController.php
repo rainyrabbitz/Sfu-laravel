@@ -21,7 +21,8 @@ class PaController extends Controller
      */
     public function index()
     {
-        return view('pa.pa');
+        $pa = Performance::orderBy('year', 'asc')->get();
+        return view('pa.pa', ['performances' => $pa]);
     }
 
     /**
@@ -43,8 +44,7 @@ class PaController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'file' => 'mimes:pdf',
-            'name' => 'max:100',
+            'file' => 'mimes:pdf'
         ]);
 
         if ($validator->fails()) {
@@ -54,7 +54,7 @@ class PaController extends Controller
         $performanceList = Performance::where('year', '=', $request->get('year'))->get();
         if(sizeof($performanceList) > 0) {
                 foreach ($performanceList as $performance) {
-                    $filename = base_path() . '/public/uploads/Performances-' . $request->get('year') . '/' . $performance->file_path;
+                    $filename = base_path() . '/public/uploads/Performances/Performance-' . $request->get('year') . '/' . $performance->file_path;
                     if (File::exists($filename)) {
                         File::delete($filename);
                     }
@@ -66,15 +66,14 @@ class PaController extends Controller
         if(Input::file('file')->isValid()){
 
             $filePath = date('Ymd_His').'.pdf';
-            if (Input::file('file')->move(base_path() . '/public/uploads/Performances-' . $request->get('year'), $filePath)) {
+            if (Input::file('file')->move(base_path() . '/public/uploads/Performances/Performance-' . $request->get('year'), $filePath)) {
                 //example of delete exist file
 
                 $performance = new Performance();
-                $performance->file_name = $request->get('name');
                 $performance->file_path = $filePath;
                 $performance->year = $request->get('year');
                 $performance->save();
-                return redirect()->back();
+                return redirect('admin/management');
             } else {
                 return redirect()->back()->withErrors(['error_message' => 'ไฟล์อัพโหลดมีปัญหากรุณาลองใหม่อีกครั้ง']);
             }

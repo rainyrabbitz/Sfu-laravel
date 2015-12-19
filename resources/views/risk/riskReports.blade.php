@@ -1,4 +1,4 @@
-@extends('master_old')
+@extends('master')
 
 @section('title', 'เอกสารรายงาน')
 
@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <div class="panel text-center">
                 <div class="panel-body" style="background-color: #FDEEF4">
-                    <a href="/riskPlan" class="report-menu">แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.</a>
+                    <a href="/risk-plan" class="report-menu">แผนการประเมินผลการบริหารความเสี่ยงและการควบคุมภายใน อผม.</a>
                 </div>
             </div>
         </div>
@@ -34,18 +34,7 @@
         <div class="col-md-12">
             <div class="panel text-center">
                 <div class="panel-body" style="background-color: #FDEEF4">
-                    <a href="/riskProgress" class="report-menu">รายงานความก้าวหน้าแผนบริหารความเสี่ยงและควบคุมภายใน อผม. ประจำเดือน</a>
-                </div>
-            </div>
-        </div>
-
-        {{--<div class="col-md-12" style="height: 1px; background-color: #31b0d5; margin-bottom: 30px"></div>--}}
-
-        <div class="col-md-12">
-            <div class="panel text-center">
-                <div class="panel-body" style="background-color: #FDEEF4">
-
-                    <a href="/manageRisk" class="report-menu">รายงานบริหารความเสี่ยง อผม.</a>
+                    <a href="/risk-progress" class="report-menu">รายงานความก้าวหน้าแผนบริหารความเสี่ยงและควบคุมภายใน อผม. ประจำเดือน</a>
                 </div>
             </div>
         </div>
@@ -56,7 +45,18 @@
             <div class="panel text-center">
                 <div class="panel-body" style="background-color: #FDEEF4">
 
-                    <a href="/control" class="report-menu">รายงานการควบคุมภายใน อผม. (สิ้นปี)</a>
+                    <a href="/manage-risk" class="report-menu">รายงานบริหารความเสี่ยง อผม.</a>
+                </div>
+            </div>
+        </div>
+
+        {{--<div class="col-md-12" style="height: 1px; background-color: #31b0d5; margin-bottom: 30px"></div>--}}
+
+        <div class="col-md-12">
+            <div class="panel text-center">
+                <div class="panel-body" style="background-color: #FDEEF4">
+
+                    <a href="/control-report" class="report-menu">รายงานการควบคุมภายใน อผม. (สิ้นปี)</a>
                 </div>
             </div>
         </div>
