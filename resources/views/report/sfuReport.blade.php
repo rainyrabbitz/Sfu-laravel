@@ -17,34 +17,26 @@
                         <img class="img-responsive" src="http://placehold.it/700x300" alt="">
                     </a>
                 </div>
-                <div class="col-md-5 form-inline">
-                    <h3> เลือกปี</h3>
+        <div class="col-md-5 panel-group" id="accordion">
+            @foreach($years as $year)
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$year}}">ประจำปี {{$year}}</a>
+                        </h4>
+                    </div>
+                    <div id="collapse{{$year}}" class="panel-collapse collapse">
+                        @foreach($sfuReports as $sfuReport)
+                            @if($sfuReport->year == $year)
+                                <div class="panel-footer">
+                                    <a href="uploads/Sfu-reports/{{$year}}/{{$sfuReport->file_path}}" target="_blank">{{$sfuReport->no}}</a>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <select class="form-control">
-                        <option>2558</option>
-                        <option>2559</option>
-                    </select>
-                </div>
-                <div class="col-md-5">
-                    <ul>
-                        <li><h3>ครั้งที่ 1</h3></li>
-                        <li><h3>ครั้งที่ 2</h3></li>
-                        <li><h3>ครั้งที่ 3</h3></li>
-                        <li><h3>ครั้งที่ 4</h3></li>
-                        <li><h3>ครั้งที่ 5</h3></li>
-                        <li><h3>ครั้งที่ 6</h3></li>
-                        <li><h3>ครั้งที่ 7</h3></li>
-                        <li><h3>ครั้งที่ 8</h3></li>
-                        <li><h3>ครั้งที่ 9</h3></li>
-                        <li><h3>ครั้งที่ 10</h3></li>
-                        <li><h3>ครั้งที่ 11</h3></li>
-                        <li><h3>ครั้งที่ 12</h3></li>
-                        <li><h3>ครั้งที่ 13</h3></li>
-                        <li><h3>ครั้งที่ 14</h3></li>
-                        <li><h3>ครั้งที่ 15</h3></li>
-                    </ul>
-                </div>
+            @endforeach
+        </div>
         </div>
     </div>
 

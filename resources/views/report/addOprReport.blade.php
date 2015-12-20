@@ -1,6 +1,6 @@
-@extends('master_admin')
+@extends('master')
 
-@section('title', 'รายงานการประชุม ควฝผ-อผม.')
+@section('title', 'ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.')
 
 @section('content')
 
@@ -19,19 +19,24 @@
     <div class="container">
 
         <div class="col-md-12 text-center">
-            <h2>เพิ่มไฟล์ของ รายงานการประชุม ควฝผ-อผม.</h2>
+            <h3>เพิ่มไฟล์ของ รายงานผมการดำเนินงาน อผม.</h3>
         </div>
 
-        <form class="col-md-offset-3 col-md-6" action="/sfu/meeting-report" method="post" enctype="multipart/form-data">
+        <form class="col-md-offset-3 col-md-6 text-center" action="/oprReport" method="post" enctype="multipart/form-data">
             {{--always required csrf_token--}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <div class="form-group">
-                <input type="text" name="name" class="form-control input-lg" placeholder="ชื่อประกาศ">
-            </div>
-            <div class="form-group">
                 <input type="file" name="file" class="form-control input-lg">
             </div>
+
+            <div class="form-group">
+                <select class="form-control input-lg" name="period">
+                    <option value="1">6 เดือน</option>
+                    <option value="2">สิ้นปี</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <select class="form-control input-lg" name="year">
                     <option value="2555">2555</option>
@@ -47,27 +52,8 @@
                     <option value="2565">2565</option>
                 </select>
             </div>
+
             <div class="form-group">
-                <label style="font-size: 18px;">ครั้งที่</label>
-                <select class="form-control input-lg" name="no">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                </select>
-            </div>
-            <div class="form-group text-center">
                 <input type="submit" value="เพิ่มประกาศ" class="btn btn-default">
             </div>
         </form>

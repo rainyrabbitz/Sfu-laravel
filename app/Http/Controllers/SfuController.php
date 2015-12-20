@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\SfuMeetingReport;
+use App\Model\SfuReport;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -19,7 +20,15 @@ class SfuController extends Controller
      */
     public function index()
     {
-        return view('report.sfuReport');
+        $years = SfuReport::orderBy('year', 'asc')->lists('year');
+        $results = array();
+        foreach($years as $year){
+            $results[] = $year;
+        }
+        $data = array_unique($results);
+
+        $sfuReports = SfuReport::orderBy('year', 'asc')->orderBy('no', 'asc')->get();
+        return view('report.sfuReport',['years' => $data], ['sfuReports' => $sfuReports]);
     }
 
     /**
@@ -29,7 +38,7 @@ class SfuController extends Controller
      */
     public function create()
     {
-        return view('report.addSfuMeetingReport');
+        return view('report.addSfuReport');
     }
 
     /**
@@ -42,39 +51,33 @@ class SfuController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'file' => 'mimes:pdf',
-            'name' => 'max:100',
+            'year' => 'required',
         ]);
 
         if ($validator->fails()) {
             return redirect()->back()->withErrors(['file' => 'ไฟล์จะต้องเป็น .pdf เท่านั้น'])->withInput();
         }
 
-        if(Input::file('file')->isValid()){
+        //example of delete exist file
+        $existSfuReport = SfuReport::where('year','=',$request->get('year'))->where('no','=',$request->get('no'))->first();
 
-            $filePath = $request->get('no').'.pdf';
-            if (Input::file('file')->move(base_path() . '/public/uploads/SfuMeetingReport-' . $request->get('year'), $filePath)) {
+        if ($existSfuReport != null) {
+            $filename = base_path() . '/public/uploads/Sfu-reports/' . $request->get('year') . '/' . $existSfuReport->file_path;
+            if (File::exists($filename)) {
+                File::delete($filename);
+            }
+            SfuReport::destroy($existSfuReport->id);
+        }
 
-                //example of delete exist file
-                //get all file to delete
-                $reportList = SfuMeetingReport::where('year','=',$request->get('year'))->where('no','=',$request->get('no'))->get();
-                if(sizeof($reportList)!=0){
-                    foreach($reportList as $report) {
-                        $filename = base_path() . '/public/uploads/SfuMeetingReport-' . $request->get('year') . '/' . $report->file_path;
-                        //delete upload file
-                        if (File::exists($filename)) {
-                            File::delete($filename);
-                        }
-                        SfuMeetingReport::destroy($report->id);
-                    }
-                }
-                //add new file path in to databnase
-                $meetingReport = new SfuMeetingReport();
-                $meetingReport->year = $request->get('year');
-                $meetingReport->file_name = $request->get('name');
-                $meetingReport->no = $request->get('no');
-                $meetingReport->file_path = $filePath;
-                $meetingReport->save();
+        if (Input::file('file')->isValid()) {
 
+            $filePath = $request->get('no') . '.pdf';
+            if (Input::file('file')->move(base_path() . '/public/uploads/Sfu-reports/'.$request->get('year'), $filePath)) {
+                $sfuReport = new SfuReport();
+                $sfuReport->file_path = $filePath;
+                $sfuReport->year = $request->get('year');
+                $sfuReport->no = $request->get('no');
+                $sfuReport->save();
                 return redirect('/admin/management');
             } else {
                 return redirect()->back()->withErrors(['error_message' => 'ไฟล์อัพโหลดมีปัญหากรุณาลองใหม่อีกครั้ง']);

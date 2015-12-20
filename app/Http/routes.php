@@ -112,18 +112,22 @@ Route::post('/performances', 'PaController@store');
 Route::get('/track_pa', 'TrackController@index');
 
 Route::get('/csr_activity', 'CsrController@index');
+Route::get('/csr_activity/add', 'CsrController@create');
+Route::post('/csr_activity', 'CsrController@store');
 
 Route::get('/track-performance/add', 'TrackController@create');
 
 Route::post('/track-performance/add', 'TrackController@store');
 
 Route::get('/oprReport', 'OprController@index');
+Route::get('/oprReport/add', 'OprController@create');
+Route::post('/oprReport', 'OprController@store');
 
 
 //sfu report
-Route::get('/sfuReport', 'SfuController@index');
-Route::get('/sfu/meeting-report/add', 'SfuController@create');
-Route::post('/sfu/meeting-report', 'SfuController@store');
+Route::get('/sfu-report', 'SfuController@index');
+Route::get('/sfu-report/add', 'SfuController@create');
+Route::post('/sfu-report', 'SfuController@store');
 //Route::get('/progressreport', 'ProgressController@index');
 
 Route::get('/member/add', 'MemberController@create');
