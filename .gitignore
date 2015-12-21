@@ -7,6 +7,13 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+### Laravel template
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
+
+/.gitignore
 
 # Windows Installer files
 *.cab
