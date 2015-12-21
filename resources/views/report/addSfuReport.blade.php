@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.')
+@section('title', 'รายงานการประชุม ควผฝ-อผม')
 
 @section('content')
 
@@ -17,9 +17,15 @@
     @endif
 
     <div class="container">
-
         <div class="col-md-12 text-center">
-            <h3>เพิ่มไฟล์ของ รายงานผมการดำเนินงาน อผม.</h3>
+            <h2>
+                <p style="color: #5c7cef">เพิ่มไฟล์ของ
+                    <span class="header2"> รายงานการประชุม ควผฝ-อผม.</span></p>
+            </h2>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" style="height: 2px; background-color: #c0c0c0; margin-bottom: 50px"></div>
         </div>
 
         <form class="col-md-offset-3 col-md-6 text-center" action="/sfu-report" method="post" enctype="multipart/form-data">

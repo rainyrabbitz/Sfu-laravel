@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">แผนการประเมินผล<span class="header2">การบริหารความเสี่ยงและการควบคุมภายใน อผม.</span></p>
             </h2>

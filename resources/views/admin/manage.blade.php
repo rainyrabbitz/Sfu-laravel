@@ -6,7 +6,7 @@
 
 
     <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">อัพเดท<span class="header2">ไฟล์</span></p>
             </h2>
@@ -94,19 +94,19 @@
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานผลการดำเนินงาน อผม. (OPR)</a>
+                <a href="/oprReport/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">รายงานผลการดำเนินงาน อผม. (OPR)</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/sfu/meeting-report/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุม ควฝผ-อผม.</a>
+                <a href="/sfu-report/add" class="btn btn-primary btn-lg btn-block">รายงานการประชุม ควฝผ-อผม.</a>
             </div>
         </div>
         <div class="col-md-12 text-center" style="margin-top: 30px">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <a href="/responsibility/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">กองจิตอาสา</a>
+                <a href="/csr-activity/add" class="btn btn-secondary btn-lg btn-block" style="background-color: #B0BEC5; color: #ffffff">กองจิตอาสา</a>
             </div>
         </div>
     </div>

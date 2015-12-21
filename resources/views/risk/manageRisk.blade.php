@@ -7,7 +7,7 @@
 
 
     <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">รายงาน<span class="header2">การบริหารความเสี่ยง อผม.</span></p>
             </h2>

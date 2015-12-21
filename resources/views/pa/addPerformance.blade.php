@@ -17,11 +17,16 @@
     @endif
 
     <div class="container">
-
         <div class="col-md-12 text-center">
-            <h3>เพิ่มไฟล์ของ ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA อผม.)</h3>
+            <h2>
+                <p style="color: #5c7cef">เพิ่มไฟล์ของ
+                    <span class="header2"> ข้อปฏิบัติการประเมินผลการดำเนินงานของ อผม. (PA) <small>รูปเล่ม</small></span></p>
+            </h2>
         </div>
-
+        <div class="col-md-12">
+            <div class="col-md-1"></div>
+            <div class="text-center col-md-10" style="height: 2px; background-color: #c0c0c0; margin-bottom: 50px"></div>
+        </div>
         <form class="col-md-offset-3 col-md-6 text-center" action="/performances" method="post" enctype="multipart/form-data">
             {{--always required csrf_token--}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">

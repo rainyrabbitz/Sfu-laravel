@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">ข้อปฏิบัติ<span class="header2">การประเมินผลการดำเนินงานของ อผม.<small>  (PA อผม. รูปเล่ม)</small></span></p>
             </h2>

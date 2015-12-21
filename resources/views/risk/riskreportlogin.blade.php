@@ -17,7 +17,7 @@
     @endif
 
     <div class="container" style="margin-bottom: 30%">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">เอกสาร<span class="header2">รายงาน</span></p>
             </h2>

@@ -17,10 +17,17 @@
     @endif
 
     <div class="container">
-
         <div class="col-md-12 text-center">
-            <h3>เพิ่มไฟล์ของ ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.</h3>
+            <h2>
+                <p style="color: #5c7cef">เพิ่มไฟล์ของ
+                    <span class="header2"> ติดตามความก้าวหน้าการประเมินผลการดำเนินงานของ อผม.</span></p>
+            </h2>
         </div>
+        <div class="col-md-12">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" style="height: 2px; background-color: #c0c0c0; margin-bottom: 50px"></div>
+        </div>
+
 
         <form class="col-md-offset-3 col-md-6 text-center" action="/track-performance/add" method="post" enctype="multipart/form-data">
             {{--always required csrf_token--}}

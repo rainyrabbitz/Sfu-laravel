@@ -64,12 +64,12 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="/oprReport"><span class="glyphicon glyphicon-send"></span> รายงานผลการดำเนินงาน อผม. (OPR)</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="/sfuReport"><span class="glyphicon glyphicon-cloud"></span> รายงานการประชุม ควฝผ - อผม.</a></li>
+                    <li><a href="/sfu-report"><span class="glyphicon glyphicon-cloud"></span> รายงานการประชุม ควฝผ - อผม.</a></li>
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-submenu">
                         <a tabindex="-1" href="#"><span class="glyphicon glyphicon-calendar"></span> งานอื่นๆที่ได้รับมอบหมาย</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdf/command.pdf" target="_blank"><p>กองจิตอาสา</p></a></li>
+                            <li><a href="/csr-activity" target="_blank"><p>กองจิตอาสา</p></a></li>
                         </ul>
                     </li>
                 </ul>

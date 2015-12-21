@@ -43,7 +43,7 @@ Route::get('/hierarchy', 'ChartController@index');
 Route::get('/member', 'MemberController@index');
 
 Route::get('/announces', 'AnnounceController@index');
-Route::get('/announces/add', 'AnnounceController@create');
+Route::get('/announces/add', ['uses' => 'AnnounceController@create', 'middleware' => 'auth']);
 Route::post('/announces', 'AnnounceController@store');
 Route::get('/announces/show/{year}', 'AnnounceController@getAnnounceByYear');
 
@@ -53,53 +53,56 @@ Route::post('/progress', 'ProgressController@store');
 Route::get('/progress/add', ['uses' => 'ProgressController@create', 'middleware' => 'auth']);
 
 
-
 //plans
 Route::get('/plan', 'PlanController@index');
-Route::get('/plans/add', 'PlanController@create');
+Route::get('/plans/add', ['uses' => 'PlanController@create', 'middleware' => 'auth']);
 Route::post('/plans', 'PlanController@store');
 
 //responsibility
-Route::get('/responsibility/add', 'ResponsibilityController@create');
+Route::get('/responsibility/add',  ['uses' => 'ResponsibilityController@create', 'middleware' => 'auth']);
 Route::post('/responsibility', 'ResponsibilityController@store');
 
-Route::get('/commands/add', 'CommandController@create');
+//command
+Route::get('/commands/add', ['uses' => 'CommandController@create', 'middleware' => 'auth']);
 Route::post('/commands', 'CommandController@store');
 
 
 //board command
-Route::get('/board-command/add', 'BoardCommandController@create');
+Route::get('/board-command/add', ['uses' => 'BoardCommandController@create', 'middleware' => 'auth']);
 Route::post('/board-command', 'BoardCommandController@store');
 
 
 //Risk Report Controller
 Route::get('/riskreport/authorize', 'RiskReportController@authorizeUser');
 Route::post('/riskreport/checkpassword', 'RiskReportController@checkAuthorizeUser');
-
-
 Route::get('/riskreports', 'RiskReportController@index');
 
+//risk plan
 Route::get('/risk-plan', 'RiskplanController@index');
-Route::get('/risk-plan/add', 'RiskplanController@create');
+Route::get('/risk-plan/add', ['uses' => 'RiskplanController@create', 'middleware' => 'auth']);
 Route::post('/risk-plan', 'RiskplanController@store');
 
+//risk progress
 Route::get('/risk-progress', 'RiskprogressController@index');
-Route::get('/risk-progress/add', 'RiskprogressController@create');
+Route::get('/risk-progress/add', ['uses' => 'RiskprogressController@create', 'middleware' => 'auth']);
 Route::post('/risk-progress', 'RiskprogressController@store');
 
+//risk management
 Route::get('/risk-management', 'ManageriskController@index');
-Route::get('/risk-management/add', 'ManageriskController@create');
+Route::get('/risk-management/add', ['uses' => 'ManageriskController@create', 'middleware' => 'auth']);
 Route::post('/risk-management', 'ManageriskController@store');
 
-
+//Control report
 Route::get('/control-report', 'ControlController@index');
-Route::get('/control-report/add', 'ControlController@create');
+Route::get('/control-report/add', ['uses' => 'ControlController@create', 'middleware' => 'auth']);
 Route::post('/control-report', 'ControlController@store');
 
+//meeting report
 Route::get('/meetingReport', 'MeetingreportController@index');
-Route::get('/meetingReport/add', 'MeetingreportController@create');
+Route::get('/meetingReport/add', ['uses' => 'MeetingreportController@create', 'middleware' => 'auth']);
 Route::post('/meetingReport', 'MeetingreportController@store');
 
+//result
 Route::get('/result', 'ProgressController@index');
 
 
@@ -111,28 +114,24 @@ Route::post('/performances', 'PaController@store');
 
 Route::get('/track_pa', 'TrackController@index');
 
-Route::get('/csr_activity', 'CsrController@index');
-Route::get('/csr_activity/add', 'CsrController@create');
-Route::post('/csr_activity', 'CsrController@store');
+Route::get('/csr-activity', 'CsrController@index');
+Route::get('/csr-activity/add', ['uses' => 'CsrController@create', 'middleware' => 'auth']);
+Route::post('/csr-activity', 'CsrController@store');
 
-Route::get('/track-performance/add', 'TrackController@create');
-
-Route::post('/track-performance/add', 'TrackController@store');
+Route::get('/track-performance/add', ['uses' => 'TrackController@create', 'middleware' => 'auth']);
+Route::post('/track-performance', 'TrackController@store');
 
 Route::get('/oprReport', 'OprController@index');
-Route::get('/oprReport/add', 'OprController@create');
+Route::get('/oprReport/add', ['uses' => 'OprController@create', 'middleware' => 'auth']);
 Route::post('/oprReport', 'OprController@store');
 
 
 //sfu report
 Route::get('/sfu-report', 'SfuController@index');
-Route::get('/sfu-report/add', 'SfuController@create');
+Route::get('/sfu-report/add', ['uses' => 'SfuController@create', 'middleware' => 'auth']);
 Route::post('/sfu-report', 'SfuController@store');
-//Route::get('/progressreport', 'ProgressController@index');
 
 Route::get('/member/add', 'MemberController@create');
-
-Route::get('/product', 'ProductController@index');
 
 
 //Admin

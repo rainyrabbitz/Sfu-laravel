@@ -5,8 +5,8 @@
 
 @section('content')
 
-    <div class="container-fluid" style="margin-bottom: 30%">
-                <div class="col-md-12">
+    <div class="container" style="margin-bottom: 30%">
+                <div class="col-md-12 well">
                     <h2>
                         <p class="header">รายงาน<span class="header2">การประชุม ควฝผ-อผม.</span></p>
                     </h2>
@@ -14,7 +14,7 @@
                 <div class="col-md-12" style="height: 2px; background-color: #9479bd; margin-bottom: 20px"></div>
                 <div class="col-md-7" style="margin-top: 30px">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                        <img class="img-responsive img-rounded" src="images/1.jpg" alt="">
                     </a>
                 </div>
         <div class="col-md-5 panel-group" id="accordion">

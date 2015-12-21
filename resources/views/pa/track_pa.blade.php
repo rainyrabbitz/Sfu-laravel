@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <div class="col-lg-12">
+        <div class="col-lg-12 well">
             <h2>
                 <p class="header">ติดตาม<span class="header2">ความก้าวหน้าการประเมินผลการดำเนินงานของ อผม. เทียบกับเกณฑ์</span></p>
             </h2>

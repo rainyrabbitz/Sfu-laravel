@@ -6,7 +6,7 @@
 
     <div class="row" style="margin-bottom: 30%">
         <div class="container-fluid">
-            <div class="col-lg-12">
+            <div class="col-lg-12 well">
                 <h2>
                     <p class="header">ประกาศ<span class="header2">นโยบายและแผนการดำเนินงานของ อผม.</span></p>
                 </h2>
@@ -14,7 +14,7 @@
             <div class="col-md-12" style="height: 2px; background-color: #9479bd; margin-bottom: 20px"></div>
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <img class="img-responsive" src="images/6.jpg" alt="">
                 </a>
             </div>
             <div class="col-md-5">

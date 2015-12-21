@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'แก้ไขไฟล์')
+@section('title', 'คำสั่งแต่งตั้งคณะทำงานและวางแผน ประจำฝ่ายการผลิตเหมืองแม่เมาะ')
 
 @section('content')
 
@@ -19,9 +19,15 @@
     <div class="container-fluid">
 
         <div class="col-md-12 text-center">
-            <h2>เพิ่มไฟล์ของ คำสั่งแต่งตั้ง</h2>
+            <h2>
+                <p style="color: #5c7cef">เพิ่มไฟล์ของ
+                    <span class="header2"> คำสั่งแต่งตั้งคณะทำงานและวางแผน ประจำฝ่ายการผลิตเหมืองแม่เมาะ</span></p>
+            </h2>
         </div>
-
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" style="height: 2px; background-color: #c0c0c0; margin-bottom: 50px"></div>
+        </div>
         <form class="col-md-offset-3 col-md-6 text-center" action="/commands" method="post" enctype="multipart/form-data">
             {{--always required csrf_token--}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
